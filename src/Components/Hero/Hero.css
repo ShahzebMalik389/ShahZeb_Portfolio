@@ -1,0 +1,115 @@
+.hero{
+    background-color: black;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    min-height: 82vh;
+    gap: 40px;
+    padding: 40px 5% 60px;
+    flex-wrap: wrap;
+}
+
+.right,
+.left {
+    flex: 1 1 320px;
+}
+
+.left {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left::before{
+    content: '';
+    position: absolute;
+    width: min(60vw, 360px);
+    height: min(60vw, 360px);
+    background: linear-gradient(135deg, #ffe601, #fffb00, #f1f502);
+    filter: blur(100px);
+    opacity: 0.9;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.left img{
+    width: min(100%, 320px);
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+}
+
+.hello{
+    font-size: clamp(1.6rem, 3vw, 2.75rem);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.right h2{
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    max-width: 620px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+}
+
+.pargh{
+    max-width: 600px;
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    color: rgba(255, 255, 255, 0.685);
+    line-height: 1.6;
+    margin-top: 14px;
+}
+
+.right .btn{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
+    background-color: yellow;
+    color: black;
+    margin-top: 20px;
+    padding: 12px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 18px;
+    text-decoration: none;
+    width: fit-content;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.hello span{
+    color: yellow;
+    font-weight: 900;
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+    }
+
+    .right .btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 30px 4% 50px;
+        gap: 24px;
+    }
+
+    .right h2 {
+        max-width: 100%;
+    }
+
+    .pargh {
+        max-width: 100%;
+    }
+}
