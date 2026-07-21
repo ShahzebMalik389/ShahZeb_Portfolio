@@ -101,13 +101,17 @@
 }
 
 @media (max-width: 600px) {
-    .navbar {
-        padding: 14px 4%;
+  .navbar{
+    border: none;
+    padding: 18px;
+  }
+    .logo img{
+        width: 70px;
     }
 
     .nav-item ul {
-        font-size: 18px;
-        gap: 12px 16px;
+        font-size: 16px;
+        
     }
 
     .nav-media ul {
@@ -116,7 +120,7 @@
 
     .nav-media ul li {
         padding: 8px;
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
