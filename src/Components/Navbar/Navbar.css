@@ -3,7 +3,8 @@
     align-items: center;
     justify-content: space-between;
     background-color: black;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.616);
+    border: none;
+    box-shadow: none;
     padding: 16px 5%;
     gap: 20px;
     flex-wrap: wrap;
@@ -71,6 +72,7 @@
     list-style: none;
     background-color: rgb(255, 255, 0);
     padding: 9px;
+    border: none;
     border-radius: 40%;
     color: black;
     font-size: 22px;
