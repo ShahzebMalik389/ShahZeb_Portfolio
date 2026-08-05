@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Logo from '../Navbar/logo.jpg'
+import Logo from '../Navbar/logo2.png'
 import './Navbar.css'
 import { FaFacebook } from 'react-icons/fa'
 import { FaGithub } from 'react-icons/fa'
@@ -22,7 +22,11 @@ const Navbar = () => {
         <img src={Logo} alt='' />
       </div>
       <div className='nav-item'>
-        <ul>
+        <motion.ul
+      initial={{ opacity: 0, y: 0 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      viewport={{ once: true }}>
           <li className={menu === 'Home' ? 'active' : ''} onClick={() => handleNav('Home', '/')}>
             Home
             <span className='nav-indicator' />
@@ -39,7 +43,7 @@ const Navbar = () => {
             About
             <span className='nav-indicator' />
           </li>
-        </ul>
+        </motion.ul>
       </div>
       <div className='nav-media'>
         <motion.ul initial={{scale:0}}animate={{scale:1}} >

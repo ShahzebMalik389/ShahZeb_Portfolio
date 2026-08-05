@@ -1,63 +1,65 @@
-.skills-section{
+.skills-section {
     width: 100%;
     min-height: 82vh;
-    background: #000;
+    background: linear-gradient(135deg, rgba(2, 6, 23, 0.96), rgba(15, 23, 42, 0.95));
     padding: 20px 5% 50px;
+    border-bottom: 1px solid var(--border);
 }
 
-.skills-section h1{
+.skills-section h1 {
     text-align: center;
-    color: #fff;
+    color: var(--text);
     font-size: clamp(2.2rem, 5vw, 3.75rem);
     margin-bottom: 24px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.skills-section span{
-    color: #ffee00;
+.skills-section span {
+    color: var(--accent);
 }
 
-.skills-container{
+.skills-container {
+    transition: 0.2s;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 20px;
 }
 
-.skill-card{
-    background: #111;
-    border: 1px solid rgba(255,255,0,.2);
+.skill-card {
+    background: var(--surface);
+    border: 1px solid rgba(250, 204, 21, 0.16);
     border-radius: 20px;
     text-align: center;
     padding: 30px 16px;
-    transition: .4s;
+    transition: 0.4s;
     position: relative;
     overflow: hidden;
 }
 
-.skill-card::before{
+.skill-card::before {
     content: "";
     position: absolute;
     width: 220px;
     height: 220px;
-    background: #ffee00;
+    background: var(--accent);
     filter: blur(110px);
     top: -120px;
     right: -120px;
-    opacity: .18;
-    transition: .4s;
+    opacity: 0.16;
+    transition: 0.4s;
 }
 
-.skill-card:hover{
+.skill-card:hover {
     transform: translateY(-12px);
-    border-color: #ffee00;
-    box-shadow: 0 0 30px rgba(255,255,0,.35);
+    border-color: var(--accent);
+    box-shadow: 0 0 30px rgba(250, 204, 21, 0.25);
 }
 
-.skill-card:hover::before{
-    opacity: .35;
+.skill-card:hover::before {
+    opacity: 0.3;
 }
 
-.skill-card img{
+.skill-card img {
     width: 90px;
     height: 90px;
     object-fit: contain;
@@ -65,15 +67,15 @@
     position: relative;
 }
 
-.skill-card h2{
-    color: white;
+.skill-card h2 {
+    color: var(--text);
     font-size: clamp(1.1rem, 2vw, 1.5rem);
     margin-bottom: 10px;
     position: relative;
 }
 
-.skill-card p{
-    color: #bbbbbb;
+.skill-card p {
+    color: var(--muted);
     font-size: 16px;
     position: relative;
 }

@@ -6,6 +6,7 @@ import js from "./js.png";
 import react from "./Reactjs.png";
 import node from "./Nodejs.jpg";
 import Tailwind from "./Tailwindcss.jpg";
+import { motion } from "motion/react"
 
 
 const Skills = () => {
@@ -50,7 +51,7 @@ const skills = [
         My <span>Skills</span>
       </h1>
 
-      <div className="skills-container">
+      <motion.div  initial={{ scale: 0.5 }} animate={{ scale: 1 }}  className="skills-container">
 
         {skills.map((item, index) => (
           <div className="skill-card" key={index}>
@@ -64,7 +65,7 @@ const skills = [
           </div>
         ))}
 
-      </div>
+      </motion.div>
 
     </section>
 

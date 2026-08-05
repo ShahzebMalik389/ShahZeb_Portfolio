@@ -1,5 +1,7 @@
 import React from 'react'
 import './Project.css'
+import { motion } from "motion/react"
+
 const Project = () => {
 
   const projects = [
@@ -29,7 +31,7 @@ const Project = () => {
         My <span>Projects</span>
       </h1>
 
-      <div className="project-container">
+      <motion.div  initial={{ scale: 0.5 }} animate={{ scale: 1 }}  className="project-container">
 
         {projects.map((item, index) => (
           <div className="project-card" key={index}>
@@ -42,7 +44,7 @@ const Project = () => {
           </div>
         ))}
 
-      </div>
+      </motion.div>
 
     </section>
   )

@@ -4,8 +4,15 @@ import Project from './Components/ProjectUi/Project'
 import { Route, Routes } from 'react-router-dom'
 import Skills from './Components/Skills/Skills'
 import About from './Components/About/About'
+import { useState } from 'react'
 
 function App() {
+  const app={
+    user:"Shahzeb",
+    Id:"221177"
+  }
+  const user=localStorage.setItem("app",JSON.stringify(app))
+
   return (
     <div>
       <Navbar />

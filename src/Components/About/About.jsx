@@ -2,19 +2,26 @@ import React from 'react'
 import './About.css'
 import Logo from '../Hero/Shahzeb1.png'
 import { IoMdDownload } from "react-icons/io";
+import { motion } from "motion/react"
 
 const About = () => {
   return (
   
 <section className="about" id="about">
 
-<div className="about-left">
+<motion.div  initial={{ opacity: 0, x: -100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }} className="about-left">
 
 <img src={Logo}alt="" />
 
-</div>
+</motion.div>
 
-<div className="about-right">
+<motion.div  initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }} className="about-right">
 
 <h1>
 
@@ -34,7 +41,7 @@ Download Cv
 <IoMdDownload/>
 </a>
 
-</div>
+</motion.div>
 
 </section>
 

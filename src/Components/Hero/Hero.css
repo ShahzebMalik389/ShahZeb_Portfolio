@@ -1,18 +1,18 @@
-.hero{
-    background-color: black;
+.hero {
     display: flex;
-    color: white;
+    color: var(--text);
     align-items: center;
     justify-content: center;
-    min-height: 82vh;
+   
     gap: 40px;
-    padding: 40px 5% 60px;
+    padding: 20px 5% ;
     flex-wrap: wrap;
 }
 
 .right,
 .left {
     flex: 1 1 320px;
+    transition: 0.2s;
 }
 
 .left {
@@ -22,67 +22,91 @@
     justify-content: center;
 }
 
-.left::before{
+.left::before {
     content: '';
     position: absolute;
     width: min(60vw, 360px);
     height: min(60vw, 360px);
-    background: linear-gradient(135deg, #ffe601, #fffb00, #f1f502);
+    background: linear-gradient(135deg, var(--accent), #38bdf8, rgba(56, 189, 248, 0.4));
     filter: blur(100px);
     opacity: 0.9;
     border-radius: 50%;
     z-index: 0;
 }
 
-.left img{
+.heading {
+    font-size: 60px;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--accent), var(--accent-soft), #38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.heading1 {
+    background: linear-gradient(90deg, #fff, #f8fafc, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.left img {
     width: min(100%, 320px);
     position: relative;
     z-index: 1;
-    border-radius: 20px;
+    border-radius: 22px;
     object-fit: cover;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+  
+   
 }
 
-.hello{
+.hello {
     font-size: clamp(1.6rem, 3vw, 2.75rem);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.right h2{
+.right h2 {
     font-size: clamp(2rem, 4vw, 2.75rem);
     max-width: 620px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 10px;
 }
 
-.pargh{
-    max-width: 600px;
+.pargh {
+    width: 680px;
     font-size: clamp(1rem, 2vw, 1.35rem);
-    color: rgba(255, 255, 255, 0.685);
-    line-height: 1.6;
+    color: var(--muted);
+    line-height: 1.7;
     margin-top: 14px;
 }
 
-.right .btn{
+.right .btn {
     display: flex;
     align-items: center;
     gap: 4px;
     justify-content: center;
-    background-color: yellow;
-    color: black;
+    background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+    color: #111827;
     margin-top: 20px;
     padding: 12px 20px;
-    border-radius: 20px;
+    border-radius: 999px;
     border: none;
     font-size: 18px;
     text-decoration: none;
     width: fit-content;
     cursor: pointer;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0 10px 25px rgba(250, 204, 21, 0.22);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hello span{
-    color: yellow;
+.right .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(250, 204, 21, 0.3);
+}
+
+.hello span {
+    color: var(--accent);
     font-weight: 900;
     font-size: clamp(2rem, 3.5vw, 3.2rem);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
