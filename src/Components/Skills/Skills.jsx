@@ -2,7 +2,7 @@ import React from 'react'
 import './Skills.css'
 import Html from "./Html.png";
 import css from "./Css.png";
-import js from "./js.png";
+import js from "./Js.png";
 import react from "./Reactjs.png";
 import node from "./Nodejs.jpg";
 import Tailwind from "./Tailwindcss.jpg";
